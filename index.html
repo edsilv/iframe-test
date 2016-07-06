@@ -12,6 +12,13 @@
         </style>
     </head>
     <body>
+
+<!--
+
+<iframe width="560" height="315" src="https://edsilv.github.io/iframe-test/index.html" frameborder="0" allowfullscreen></iframe>
+
+ -->
+
         <div>
             <button id="button">Full screen</button>
             <div>
@@ -33,6 +40,10 @@
                     // fallback
                 }
             }, false);
+
+            var url = (window.location != window.parent.location) ? document.referrer : document.location;
+
+            document.write(url);
         </script>
     </body>
 </html>
