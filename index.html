@@ -1,49 +1,55 @@
 <html>
     <head>
         <script src="bigscreen.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
         <style>
+            html, body {
+                width: 100%;
+                height: 100%;
+            }
             body {
                 margin: 0;
                 padding: 0;
             }
-            div{
-                background: #fff;
+            div {
+                background-color: #fff;
             }
         </style>
     </head>
     <body>
 
-<!--
+    <!--
 
-<iframe width="560" height="315" src="https://edsilv.github.io/iframe-test/index.html" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://edsilv.github.io/iframe-test/index.html" frameborder="0" allowfullscreen></iframe>
 
- -->
+    -->
 
-        <div>
-            <button id="button">Full screen</button>
-            <div>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent rutrum tempus ante eu porta. Nullam non dignissim purus. Phasellus ornare euismod nulla at venenatis. Etiam urna enim, rutrum a mollis id, semper et arcu. In hac habitasse platea dictumst. Nunc interdum, tortor eget tincidunt ullamcorper, mauris tortor tincidunt libero, et elementum nulla nisi id odio. Etiam in bibendum libero, quis consequat massa. Nunc velit lacus, dignissim ut ante non, bibendum placerat mauris. Sed varius sollicitudin gravida. Pellentesque elit velit, eleifend id consequat ac, dictum tempus mauris.
+    <button id="button">Full screen</button>
+    <div>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent rutrum tempus ante eu porta. Nullam non dignissim purus. Phasellus ornare euismod nulla at venenatis. Etiam urna enim, rutrum a mollis id, semper et arcu. In hac habitasse platea dictumst. Nunc interdum, tortor eget tincidunt ullamcorper, mauris tortor tincidunt libero, et elementum nulla nisi id odio. Etiam in bibendum libero, quis consequat massa. Nunc velit lacus, dignissim ut ante non, bibendum placerat mauris. Sed varius sollicitudin gravida. Pellentesque elit velit, eleifend id consequat ac, dictum tempus mauris.
 
-    Suspendisse vel orci est. Aliquam erat volutpat. Nunc sed finibus turpis. Vestibulum tempor purus et varius ultricies. Sed pellentesque viverra finibus. Nullam at justo ac arcu tempor blandit. Proin euismod elit eget sem tincidunt, ut imperdiet mi facilisis. Nullam scelerisque laoreet dignissim.
+        Suspendisse vel orci est. Aliquam erat volutpat. Nunc sed finibus turpis. Vestibulum tempor purus et varius ultricies. Sed pellentesque viverra finibus. Nullam at justo ac arcu tempor blandit. Proin euismod elit eget sem tincidunt, ut imperdiet mi facilisis. Nullam scelerisque laoreet dignissim.
 
-    Donec elementum faucibus consequat. Aliquam condimentum eros sodales tristique egestas. Aliquam lacinia bibendum convallis. Suspendisse elementum leo in est euismod, sed pretium lorem sodales. Ut volutpat est maximus metus laoreet auctor. Aliquam eu elit erat. Mauris eleifend quis turpis ut euismod. Cras dignissim at dui eu ullamcorper. Etiam non nibh at tellus vestibulum pretium vel vel risus. Duis enim lacus, vehicula eget dui ut, posuere lacinia nunc. Proin vitae odio tellus. Sed nec lorem sit amet ante sollicitudin tempus. Donec tincidunt fringilla metus, vel ultricies libero vestibulum non. Sed efficitur magna quis pretium blandit. Vivamus bibendum erat ultrices mauris vestibulum finibus at et enim.
+        Donec elementum faucibus consequat. Aliquam condimentum eros sodales tristique egestas. Aliquam lacinia bibendum convallis. Suspendisse elementum leo in est euismod, sed pretium lorem sodales. Ut volutpat est maximus metus laoreet auctor. Aliquam eu elit erat. Mauris eleifend quis turpis ut euismod. Cras dignissim at dui eu ullamcorper. Etiam non nibh at tellus vestibulum pretium vel vel risus. Duis enim lacus, vehicula eget dui ut, posuere lacinia nunc. Proin vitae odio tellus. Sed nec lorem sit amet ante sollicitudin tempus. Donec tincidunt fringilla metus, vel ultricies libero vestibulum non. Sed efficitur magna quis pretium blandit. Vivamus bibendum erat ultrices mauris vestibulum finibus at et enim.
 
-    Morbi venenatis, dui viverra lobortis ultrices, urna mi ultrices urna, vitae condimentum est enim vel quam. Aenean porta sodales tortor ac venenatis. Phasellus sit amet fermentum velit. Mauris volutpat rhoncus quam. Ut rhoncus et metus eu molestie. Cras felis lacus, tincidunt vitae est quis, placerat tincidunt dolor. Nulla pharetra facilisis tortor vitae ultricies. Sed aliquam malesuada diam, eu volutpat diam. Nullam eget malesuada purus, non elementum sapien. Quisque pretium nunc eu metus sollicitudin blandit quis sit amet enim. Aliquam id lectus placerat, feugiat elit eu, pellentesque ante. Maecenas in sapien non neque sagittis euismod non id ante. Quisque sit amet ullamcorper nulla, in aliquet purus. Mauris sed vehicula libero. Etiam elementum eros augue. Nam quis turpis venenatis, pharetra lectus eget, interdum nisl.
-            </div>
-        </div>
-        <script>
-            document.getElementById('button').addEventListener('click', function() {
+        Morbi venenatis, dui viverra lobortis ultrices, urna mi ultrices urna, vitae condimentum est enim vel quam. Aenean porta sodales tortor ac venenatis. Phasellus sit amet fermentum velit. Mauris volutpat rhoncus quam. Ut rhoncus et metus eu molestie. Cras felis lacus, tincidunt vitae est quis, placerat tincidunt dolor. Nulla pharetra facilisis tortor vitae ultricies. Sed aliquam malesuada diam, eu volutpat diam. Nullam eget malesuada purus, non elementum sapien. Quisque pretium nunc eu metus sollicitudin blandit quis sit amet enim. Aliquam id lectus placerat, feugiat elit eu, pellentesque ante. Maecenas in sapien non neque sagittis euismod non id ante. Quisque sit amet ullamcorper nulla, in aliquet purus. Mauris sed vehicula libero. Etiam elementum eros augue. Nam quis turpis venenatis, pharetra lectus eget, interdum nisl.
+        <br/><br/>        
+    </div>
+    <script>
+        $(function() {
+            $('#button').on('click', function() {
                 if (BigScreen.enabled) {
                     BigScreen.toggle();
                 }
                 else {
                     // fallback
                 }
-            }, false);
+            });
 
             var url = (window.location != window.parent.location) ? document.referrer : document.location;
 
-            document.write(url);
-        </script>
+            $('div').append(url.toString());
+        });
+    </script>
     </body>
 </html>
